@@ -113,7 +113,8 @@ ul {
 .navigation-link.current {
   color: var(--color-blue);
 }
-.navigation-link:active {
+.navigation-link:active,
+.navigation-link:focus {
   color: var(--color-blue);
 }
 .navigation-mail {
@@ -126,7 +127,8 @@ ul {
   color: var(--color-comment);
   font-style: normal;
 }
-.navigation-mail:hover {
+.navigation-mail:hover,
+.navigation-mail:focus {
   color: var(--color-blue);
   fill: var(--color-blue);
 }
@@ -148,6 +150,9 @@ ul {
   line-height: 1.15;
   letter-spacing: 0.02em;
   margin-left: 40px;
+}
+.navigation-tel:focus {
+  color: var(--color-blue);
 }
 /*body*/
 .hero-background {
@@ -310,12 +315,9 @@ ul {
 .button-color:hover,
 .button-color:focus {
   background-color: var(--color-blue);
-  font-size: 16px;
-  line-height: 1.6;
-  text-align: center;
   letter-spacing: 0.03em;
   color: var(--color-white);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .portfolio-button {
   display: flex;
@@ -343,10 +345,14 @@ ul {
 .gallary-card {
   border: 1px solid #eeeeee;
   padding: 20px 24px;
-}
-.portfolio-card:hover   {
-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
+  }
+.portfolio-card {
+  display: block;
+   }
+ .portfolio-card:hover,
+ .portfolio-card:focus {
+box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+ }
 /* Client */
 .client-list {
   display: flex;
@@ -362,7 +368,8 @@ filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   height: 100%;
   fill: var(--color-icon);
 }
-.client-name:hover {
+.client-name:hover,
+.client-name:focus{
   fill: var(--color-blue);
 }
 .client-link {
@@ -372,11 +379,13 @@ filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   text-align: center;
   fill: var(--color-comment);
 }
-.client-link:hover {
+.client-link:hover,
+.client-link:focus {
   border-color: var(--color-blue);
   fill: var(--color-blue);
 }
-.client-icon:hover {
+.client-icon:hover, 
+.client-icon:focus {
   fill: var(--color-blue);
 }
 .social-list {
@@ -397,13 +406,16 @@ filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   align-items: center ;
   width: 100%;
   height: 100%;
+  border-radius: 50%;
   fill: var(--color-icon);
   }
 .social-item:hover {
   background-color: var(--color-blue);
 }
-.social-link:hover {
+.social-link:hover,
+.social-link:focus {
 fill: var(--color-white);
+background-color: var(--color-blue);
 }
 /* futer*/
 .footer-background {
@@ -452,7 +464,8 @@ fill: var(--color-white);
   background-color: rgba(255, 255, 255, 0.1);
   fill: var(--color-white);
 }
-.social-item-futer:hover {
+.social-link-futer:hover,
+.social-link-futer:focus {
   background-color: var(--color-blue);
 }
 .social-link-futer {
@@ -461,5 +474,7 @@ fill: var(--color-white);
   align-items: center ;
   width: 100%;
   height: 100%;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
   fill: var(--color-white);
   }
